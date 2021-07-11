@@ -5,6 +5,6 @@ config();
 
 const twitter = new Twitter().twitter()
 
-twitter.subscribe(subscribe => {
-  console.log(subscribe.urlPerfil);
+twitter.subscribe(socialNetwork => {
+  console.log(socialNetwork.urlPerfil);
 });
