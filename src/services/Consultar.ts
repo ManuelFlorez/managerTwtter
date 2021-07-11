@@ -13,7 +13,10 @@ export class Consultar {
     }
   }
 
-  public twitter() :Observable<SocialNetwork> {
-    
+  public twitter(): Observable<SocialNetwork> {
+    return new Observable(subscriber => {
+      subscriber.next(this.socialNetwork);
+      subscriber.complete();
+    });
   }
 }
