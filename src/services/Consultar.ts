@@ -9,7 +9,7 @@ export class Consultar {
     this.socialNetwork = {
       id: generate(),
       name: 'Twitter',
-      urlPerfil: ''
+      urlPerfil: process.env.URL_PERFIL_TWITTER || ''
     }
   }
 
