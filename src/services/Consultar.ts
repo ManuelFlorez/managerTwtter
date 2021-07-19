@@ -1,9 +1,10 @@
-import { SocialNetwork } from "../SocialNetworks"
+import { SocialNetwork } from "../models/SocialNetworks"
 import { generate } from 'shortid'
 import { Observable } from 'rxjs'
 
 export class Consultar {
-  socialNetwork: SocialNetwork;
+
+  socialNetwork: SocialNetwork
 
   constructor() {
     this.socialNetwork = {
@@ -15,9 +16,9 @@ export class Consultar {
 
   public twitter(): Observable<SocialNetwork> {
     return new Observable(subscriber => {
-      subscriber.next(this.socialNetwork);
-      subscriber.complete();
-    });
+      subscriber.next(this.socialNetwork)
+      subscriber.complete()
+    })
   }
 
 }

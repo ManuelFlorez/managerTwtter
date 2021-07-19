@@ -1,10 +1,10 @@
 import { Consultar } from './services/Consultar'
 import { config } from 'dotenv'
 
-config();
+config()
 
 const twitter = new Consultar().twitter()
 
 twitter.subscribe(socialNetwork => {
-  console.log(socialNetwork.urlPerfil);
-});
+  console.log(socialNetwork.urlPerfil)
+})
